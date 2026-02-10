@@ -9,6 +9,7 @@ export const ItemCounter = ({ name, count = 1 }: ItemCounterProps) => {
   const [itemCount, setItemCount] = useState(count);
   const IncreaseCount = () => setItemCount(itemCount + 1);
   const DecreaseCount = () => setItemCount(itemCount - 1);
+  if (itemCount === 1) return;
   return (
     <>
       <section className="flex items-center gap-4 mt-5 bg-zinc-900 p-4 rounded-xl">
